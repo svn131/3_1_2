@@ -3,10 +3,11 @@ package com.example.kata312.service;
 import com.example.kata312.model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
 
-    User findById(Long id);
+    Optional<User> findById(Long id);
 
     List<User> findAll();
 

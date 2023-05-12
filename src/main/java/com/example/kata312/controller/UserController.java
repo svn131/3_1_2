@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class UserController {
@@ -50,14 +51,14 @@ public class UserController {
     }
 
 
-    @GetMapping("user-update/{id}")
+        @GetMapping("user-update/{id}")
     public String updateUserForm(@PathVariable("id") Long id, Model model) {
-            User user = userService.findById(id);
-            model.addAttribute("user",user);
+            Optional<User> userOptional = userService.findById(id);
+            User user = userOptional.get();
+            model.addAttribute("user", user);
             return "user-update";
+        }
 
-
-    }
     @PostMapping("user-update")
     public String ubdateUser(User user) {
         userService.saveUser(user);
