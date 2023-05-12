@@ -3,6 +3,7 @@ package com.example.kata312.controller;
 
 import com.example.kata312.model.User;
 import com.example.kata312.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
