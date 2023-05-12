@@ -1,6 +1,7 @@
 package com.example.kata312.model;
 
 import jakarta.persistence.*;
+
 import lombok.Data;
 
 import java.util.Objects;
