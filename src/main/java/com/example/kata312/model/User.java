@@ -16,4 +16,12 @@ public class User {
 @Column(name = "last_name")
 private String lastName;
 
+    public User( String firstName, String last_name) {
+        this.firstName=firstName;
+        this.lastName=last_name;
+    }
+
+    public User() {
+
+    }
 }

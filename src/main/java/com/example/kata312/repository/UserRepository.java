@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UserRepository  extends JpaRepository<User,Long> {
     List<User> findByLastName (String lastName);
+    User save(User user);
 }
