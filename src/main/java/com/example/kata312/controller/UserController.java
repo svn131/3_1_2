@@ -51,17 +51,17 @@ public class UserController {
     }
 
 
-        @GetMapping("user-update/{id}")
+    @GetMapping("user-update/{id}")
     public String updateUserForm(@PathVariable("id") Long id, Model model) {
-            Optional<User> userOptional = userService.findById(id);
-            User user = userOptional.get();
-            model.addAttribute("user", user);
-            return "user-update";
-        }
+        Optional<User> userOptional = userService.findById(id);
+        User user = userOptional.get();
+        model.addAttribute("user", user);
+        return "user-update";
+    }
 
     @PostMapping("user-update")
-    public String ubdateUser(User user) {
-        userService.saveUser(user);
+    public String updateUser(User user) {
+        userService.updateUser(user);
         return "redirect:/users";
     }
 

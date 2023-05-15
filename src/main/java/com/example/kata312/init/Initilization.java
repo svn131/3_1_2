@@ -21,8 +21,8 @@ public class Initilization {
 
     @PostConstruct
     public void create() {
-        User user1 = new User("FerstName1","LastName1");
-        User user2 = new User("FerstName2","LastName2");
+        User user1 = new User("FerstName1", "LastName1");
+        User user2 = new User("FerstName2", "LastName2");
         userRepository.save(user1);
         userRepository.save(user2);
     }
